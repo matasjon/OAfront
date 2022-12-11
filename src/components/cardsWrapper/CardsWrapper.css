@@ -1,0 +1,14 @@
+/* .cardWrapper .wrapper {
+    margin: 2rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+  }
+
+  @media screen and (max-width: 940px){
+    .cardWrapper .wrapper {
+        grid-template-columns: repeat(auto-fit, minmax(14rem, 16rem));
+        justify-content: left;
+    }
+  } */
