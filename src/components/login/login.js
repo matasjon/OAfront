@@ -29,6 +29,7 @@ const LoginPage = () => {
         } catch (error) {
             if (error.response) {
                 setMsg(error.response.data.msg);
+                setMsg('*Slapyvardis arba slaptažodis neteisingas.');
             }
         }
     }
@@ -40,7 +41,7 @@ const LoginPage = () => {
             <div className='form-container'>
                 <form onSubmit={Auth}>  
                     <h1>Prisijungti</h1>
-
+                    <p>{msg}</p>
                     <div>
                         <label>Slapyvardis</label>
                         <input type="text" placeholder='Įveskite slapyvardį' value={username} onChange={(e) => setUsername(e.target.value)} />

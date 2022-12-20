@@ -23,6 +23,7 @@ const Register = () => {
         } catch (error) {
             if (error.response) {
                 setMsg(error.response.data.msg);
+                setMsg("* Nepavyko prisiregistruoti.");
             }
         }
     }
@@ -33,6 +34,7 @@ const Register = () => {
                 <div className='form-container'>
                     <form onSubmit={Register}>  
                         <h1>Registracija</h1>
+                        <p>{msg}</p>
                         <div>
                             <label>Slapyvardis</label>
                             <input type="text" placeholder='Įveskite slapyvardį' value={name} onChange={(e) => setName(e.target.value)} />
@@ -48,7 +50,7 @@ const Register = () => {
                             <input type="password" placeholder='Įveskite slaptažodį' value={password} onChange={(e) => setPassword(e.target.value)} />
                         </div>
 
-
+                        <p><input type="checkbox" placeholder='Organizatorius' /> Organizatorius</p>
 
                         <button type="submit">Registruotis</button>
 

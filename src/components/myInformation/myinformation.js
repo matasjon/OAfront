@@ -28,6 +28,7 @@ const MyInformation = () => {
         } catch (error) {
             if (error.response) {
                 setMsg(error.response.data.msg);
+                setMsg('* Sukurti nepavyko');
             }
         }
     }
